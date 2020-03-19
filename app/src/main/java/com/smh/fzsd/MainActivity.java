@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String time = editText.getText().toString();
             if (!TextUtils.isEmpty(time)) {
                 long intervalTime = Long.parseLong(time);
-                if (intervalTime >= 20) {
+                if (intervalTime >= 10) {
                     L.e("启动服务,时间是:" + intervalTime);
                     tvStatus.setText("服务已开启");
                     timer = new CountDownTimer(Long.MAX_VALUE, intervalTime) {

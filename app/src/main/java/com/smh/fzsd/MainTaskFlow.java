@@ -70,7 +70,7 @@ public class MainTaskFlow implements Runnable {
                 .addStroke(new GestureDescription.
                         StrokeDescription(path,
                         0,//方法运行后，过多久执行
-                        10))//持续下拉时间
+                        5))//持续下拉时间
                 .build();
 
         accService.dispatchGesture(gestureDescription, new AccessibilityService.GestureResultCallback() {
@@ -109,7 +109,7 @@ public class MainTaskFlow implements Runnable {
 //        SystemClock.sleep(38);//必须要有这个，不然会获取不到控件
 
         for (int i = 0; i < 20; i++) {
-            SystemClock.sleep(2);//必须要有这个，不然会获取不到控件
+            SystemClock.sleep(1);//必须要有这个，不然会获取不到控件
             AccessibilityNodeInfo root = accService.getRootInActiveWindow();
             if (root != null) {
                 if (AccessibilityHelper.clickByText(root, "购买")) {
