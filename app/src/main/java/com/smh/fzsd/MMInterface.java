@@ -14,7 +14,7 @@ public interface MMInterface {
 
     void onAccServiceDestroy(AccessibilityService service);
 
-    int onAccServiceStartCommand(AccessibilityService service, Intent intent, int flags, int startId,Context context);
+    int onAccServiceStartCommand(AccessibilityService service, Intent intent, int flags, int startId, Context context);
 
     void onAccEvent(AccessibilityService service, AccessibilityEvent event);
 

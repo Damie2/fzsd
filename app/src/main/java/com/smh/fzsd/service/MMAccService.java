@@ -2,6 +2,7 @@ package com.smh.fzsd.service;
 
 import android.accessibilityservice.AccessibilityService;
 import android.content.Intent;
+import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 
 import com.smh.fzsd.MMInterface;
@@ -9,13 +10,13 @@ import com.smh.fzsd.MainEntrance;
 
 
 public class MMAccService extends AccessibilityService {
-
+    private static final String TAG = "MMAccService";
     MMInterface mmInterface;
-
 
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d(TAG, "onCreate: ");
         mmInterface = new MainEntrance();
         mmInterface.onAccServiceCreate(this);
     }

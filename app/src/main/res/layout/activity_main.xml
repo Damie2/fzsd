@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:text="1000"
+        android:text="20"
         android:id="@+id/et_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,8 +24,12 @@
         android:layout_alignLeft="@id/et_time"
         android:text="请输入刷新间隔时间，1000为一秒，请不要低于300" />
 
+
+
     <androidx.appcompat.widget.AppCompatButton
+        android:clickable="false"
         android:id="@+id/btn"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -42,6 +46,8 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:clickable="false"
+        android:visibility="invisible"
         android:layout_centerHorizontal="true"
         android:id="@+id/btn_close"
         android:layout_marginTop="20dp"
