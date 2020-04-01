@@ -70,7 +70,7 @@ public class MainTaskFlow implements Runnable {
                 .addStroke(new GestureDescription.
                         StrokeDescription(path,
                         0,//方法运行后，过多久执行
-                        5))//持续下拉时间
+                        1))//持续下拉时间
                 .build();
 
         accService.dispatchGesture(gestureDescription, new AccessibilityService.GestureResultCallback() {
@@ -95,6 +95,7 @@ public class MainTaskFlow implements Runnable {
                     }
                 }
             }
+
 
             @Override
             public void onCancelled(GestureDescription gestureDescription) {
