@@ -111,7 +111,11 @@ public class MainTaskFlow implements Runnable {
 
         for (int i = 0; i < 20; i++) {
 //             SystemClock.sleep(1);//必须要有这个，不然会获取不到控件
-            Thread.sleep(0,1);//换成纳秒级别 1纳秒
+            try {
+                Thread.sleep(0,1);//换成纳秒级别 1纳秒
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             AccessibilityNodeInfo root = accService.getRootInActiveWindow();
             if (root != null) {
                 if (AccessibilityHelper.clickByText(root, "购买")) {

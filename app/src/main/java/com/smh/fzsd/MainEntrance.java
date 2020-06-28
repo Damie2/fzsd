@@ -36,7 +36,7 @@ public class MainEntrance implements MMInterface {
     public int onAccServiceStartCommand(AccessibilityService service, Intent intent, int flags, int startId, Context context) {
         try {
             //执行线程
-            L.e("执行线程");
+//            L.e("执行线程");
             threadExecutor.execute(new MainTaskFlow(service, context));
         } catch (Exception e) {
             L.e(e);
